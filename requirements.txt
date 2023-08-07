@@ -1,0 +1,2 @@
+pygame==2.5.0
+PyGetWindow==0.0.9
