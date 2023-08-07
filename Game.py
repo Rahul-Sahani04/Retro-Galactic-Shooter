@@ -27,6 +27,15 @@ alien_image = pygame.transform.scale(alien_image, (30, 30))
 life_image = pygame.image.load(os.path.join("images", "heart.png")).convert_alpha()
 life_image = pygame.transform.scale(life_image, (30, 30))
 
+
+# ! background music & Blaster Sound
+pygame.mixer.init()
+
+background_music = pygame.mixer.Sound(os.path.join("sounds", "bloodpixelhero__retro-arcade-music-5.wav"))
+background_music.play(-1) 
+
+blaster_shoot_sound = pygame.mixer.Sound(os.path.join("sounds", "blaster-shot-single.wav"))
+
 # Player class
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -51,6 +60,7 @@ class Player(pygame.sprite.Sprite):
         bullet = Bullet(self.rect.centerx, self.rect.top)
         all_sprites.add(bullet)
         bullets.add(bullet)
+        blaster_shoot_sound.play() 
 
 # Bullet class
 class Bullet(pygame.sprite.Sprite):
