@@ -232,6 +232,7 @@ async def main():
 
             # Game over condition
             if lives <= 0:
+                background_music.stop()
                 ship_blast_sound.play()
                 game_over = True
                 if score > highscore:
