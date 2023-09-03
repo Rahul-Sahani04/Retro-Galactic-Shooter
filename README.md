@@ -14,6 +14,6 @@ Ready to save the galaxy? Download "Infinite Galactic Shooter" and embark on an 
 Join the gaming community and share your high scores and experiences. 
 
 ### Screenshot
-[Starting](https://github.com/Rahul-Sahani04/Retro-Galactic-Shooter/blob/main/images/Start.png?raw=true)
+![Starting](https://github.com/Rahul-Sahani04/Retro-Galactic-Shooter/blob/main/images/Start.png?raw=true)
 
 🎮🌠 #InfiniteGalacticShooter #ArcadeGaming #IndieGame. Feel free to use this description to showcase your game on GitHub and attract players to try out your creation!
