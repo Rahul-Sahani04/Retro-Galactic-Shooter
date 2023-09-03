@@ -154,18 +154,18 @@ async def main():
             highscore_text = font.render(f"Highscore: {highscore}", True, WHITE)
             screen.blit(highscore_text, (SCREEN_WIDTH // 2 - 60, SCREEN_HEIGHT // 2 ))
 
-            # exit_button = pygame.draw.rect(screen, WHITE, (SCREEN_WIDTH/2 - 50, 400, 100, 50))
+            exit_button = pygame.draw.rect(screen, WHITE, (SCREEN_WIDTH/2 - 50, 400, 100, 50))
 
-            # exit_text = font.render("Exit", True, BLACK)
-            # screen.blit(exit_text, (SCREEN_WIDTH/2 - 25, 415))
+            exit_text = font.render("Exit", True, BLACK)
+            screen.blit(exit_text, (SCREEN_WIDTH/2 - 25, 415))
 
             pygame.display.flip()
 
-            # for event in pygame.event.get():
-            #     if event.type == pygame.MOUSEBUTTONDOWN:
-            #         mouse_pos = pygame.mouse.get_pos()
-            #         if exit_button.collidepoint(mouse_pos):
-            #             running = False
+            for event in pygame.event.get():
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    mouse_pos = pygame.mouse.get_pos()
+                    if exit_button.collidepoint(mouse_pos):
+                        running = False
         else:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
