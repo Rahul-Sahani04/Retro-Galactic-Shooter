@@ -147,17 +147,21 @@ async def main():
 
         if game_over:
             screen.fill(BLACK)
-            game_over_text = font.render("Game Over. Refresh the Page", True, WHITE)
+            game_over_text = font.render("Game Over.", True, WHITE)
             screen.blit(game_over_text, (SCREEN_WIDTH // 2 - 60, SCREEN_HEIGHT // 2 - 100))
             score_text = font.render(f"Your Score: {score}", True, WHITE)
             screen.blit(score_text, (SCREEN_WIDTH // 2 - 60, SCREEN_HEIGHT // 2 - 50))
             highscore_text = font.render(f"Highscore: {highscore}", True, WHITE)
             screen.blit(highscore_text, (SCREEN_WIDTH // 2 - 60, SCREEN_HEIGHT // 2 ))
+            
 
             exit_button = pygame.draw.rect(screen, WHITE, (SCREEN_WIDTH/2 - 50, 400, 100, 50))
 
             exit_text = font.render("Exit", True, BLACK)
             screen.blit(exit_text, (SCREEN_WIDTH/2 - 25, 415))
+            
+            highscore_text = font.render(f"Refresh the Page", True, WHITE)
+            screen.blit(highscore_text, (SCREEN_WIDTH // 2 - 100, SCREEN_HEIGHT - 100 ))
 
             pygame.display.flip()
 
