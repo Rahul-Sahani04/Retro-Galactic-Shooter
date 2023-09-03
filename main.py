@@ -26,7 +26,7 @@ alien_image = pygame.image.load(os.path.join("images", "space-invaders.png")).co
 alien_image = pygame.transform.scale(alien_image, (30, 30))
 
 life_image = pygame.image.load(os.path.join("images", "heart.png")).convert_alpha()
-life_image = pygame.transform.scale(life_image, (30, 30))
+life_image = pygame.transform.scale(life_image, (25, 25))
 
 
 # ! background music & Blaster Sound
@@ -114,7 +114,8 @@ score = 0
 lives = 3
 
 
-font = pygame.font.Font(None, 36)
+font = pygame.font.Font(None, 30)
+font2 = pygame.font.Font(None, 24)
 
 def load_highscore():
     try:
@@ -222,6 +223,11 @@ async def main():
             screen.blit(score_text, (10, 50))
             life_text = font.render(f"Lives: ", True, WHITE)
             screen.blit(life_text, (10, 90))
+            
+            move_controls = font2.render(f"Movement: Arrow Keys", True, WHITE)
+            screen.blit(move_controls, (610, 10))
+            shoot_control = font2.render(f"Shoot: SpaceBar", True, WHITE)
+            screen.blit(shoot_control, (610, 30))
 
             # Draw life icons
             for i in range(lives):
